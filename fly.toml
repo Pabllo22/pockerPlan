@@ -1,3 +1,8 @@
+# fly.toml app configuration file generated for pocker-plan on 2026-07-14T07:28:46Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = "pocker-plan"
 primary_region = "fra"
 
@@ -11,12 +16,13 @@ primary_region = "fra"
 [http_service]
   internal_port = 3000
   force_https = true
-  auto_stop_machines = "stop"
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  cpu_kind = 'shared'
   cpus = 1
   memory_mb = 256
+  memory = '1gb'
